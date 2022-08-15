@@ -50,6 +50,9 @@ async def on_message(message):
   if msg.startswith('$test'):
     await message.channel.send("I'm working, YAY!")
 
+  if msg.startswith('$help'):
+    await message.channel.send("$leetcode: generate random question \n $add : add new question \n $delete : delete question by index")
+
   # generate question
   if msg.startswith('$leetcode'):
     # allow for database (if it exists) to be used with sample question
